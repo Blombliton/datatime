@@ -27,13 +27,16 @@
           <a class="nav-link text-white" href="../test/index.html">Колаб test</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active link-dark fw-bolder" href="../housing/index.html">Колаб housing</a>
+          <a class="nav-link text-white" href="../housing/index.html">Колаб housing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="../regression/index.html">Колаб регрессия</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="../visual/index.html">Колаб визуализация</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link-dark fw-bolder" href="../datatime/index.html">Колаб визуализация</a>
         </li>
         <button type="button" class="btn btn-succes text-white px-3" type="submit" onClick="location.href='https://www.youtube.com/watch?v=kb8mcYwbFj8&ab_channel=GloAcademy'">YouTube</button> 
       </ul>
@@ -43,9 +46,26 @@
 <code>
 from google.colab import files
 uploaded = files.upload()
-
 __________________________________________________________________________________________
 
+import pandas as pd
+data = pd.read_excel('dataset.xlsx')
+data
+__________________________________________________________________________________________
+
+data.dropna()
+__________________________________________________________________________________________
+
+data.drop_duplicates().head()
+__________________________________________________________________________________________
+
+data.replace("Преподавание в младших классах", "Преподавание в школе").head()
+__________________________________________________________________________________________
+
+data.describe()
+__________________________________________________________________________________________
+
+data.head(30)
 </code>
 </pre>
 </div>
